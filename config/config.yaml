@@ -1,0 +1,50 @@
+project:
+  name: "statistical-ml-pipeline"
+  dataset_source: "blastchar/telco-customer-churn"
+
+data:
+  target_variable: "Churn"
+  continuous_features:
+    - "tenure"
+    - "MonthlyCharges"
+    - "TotalCharges"
+  categorical_features:
+    - "gender"
+    - "SeniorCitizen"
+    - "Partner"
+    - "Dependents"
+    - "PhoneService"
+    - "MultipleLines"
+    - "InternetService"
+    - "OnlineSecurity"
+    - "OnlineBackup"
+    - "DeviceProtection"
+    - "TechSupport"
+    - "StreamingTV"
+    - "StreamingMovies"
+    - "Contract"
+    - "PaperlessBilling"
+    - "PaymentMethod"
+
+statistical_thresholds:
+  alpha_normality: 0.05 # Shapiro-Wilk alpha gate
+  alpha_variance: 0.05 # F-Test / Levene / Bartlett alpha gate
+  alpha_hypothesis: 0.05 # Feature selection p-value cut-off
+  vif_max: 5.0 # Multicollinearity structural limit
+
+pipeline_routing_rules:
+  non_normal_transform: "yeo-johnson" # Options: 'log', 'box-cox', 'yeo-johnson'
+  variance_center_metric: "median" # Median for Levene (robust against non-normality)
+  shapiro_max_sample_size: 5000 # Capped for Scipy optimization limits
+  parametric_2_groups: "ind_ttest" # Standard Independent Two-Sample t-Test
+  parametric_3_plus_groups: "anova" # One-Way ANOVA
+  welch_2_groups: "welch_ttest" # Welch's t-Test (Unequal variance)
+  welch_3_plus_groups: "welch_anova" # Welch's ANOVA (Unequal variance)
+  non_parametric_2_groups: "mann_whitney" # Mann-Whitney U Test
+  non_parametric_3_plus_groups: "kruskal" # Kruskal-Wallis Test
+
+model_parameters:
+  cv_splits: 5
+  random_state: 42
+  rf_estimators: 100
+  class_weight: "balanced" # Handle Telco class imbalance natively

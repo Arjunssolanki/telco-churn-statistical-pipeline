@@ -1,0 +1,72 @@
+# ==============================================================================
+# Project Custom Exclusions
+# ==============================================================================
+# Exclude document files as requested
+*.doc
+*.docx
+*.pdf
+*.md
+!README.md
+
+# Pipeline Data & Saved Model Binaries
+*.csv
+*.xlsx
+*.pkl
+*.joblib
+*.h5
+
+# ==============================================================================
+# Standard Python Exclusions
+# ==============================================================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# ==============================================================================
+# OS & IDE Exclusions
+# ==============================================================================
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# IDEs and Text Editors
+.idea/
+.vscode/
+*.swp
+*.swo
