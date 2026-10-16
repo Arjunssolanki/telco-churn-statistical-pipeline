@@ -194,3 +194,44 @@ docker run --rm -v "%cd%:/app" statistical-ml-pipeline:latest
 ```
 
 _(Note: If executing this step from a Windows PowerShell terminal instead of a classic Command Prompt, use `-v "${PWD}:/app"` instead)._
+
+---
+
+## 🖥️ Application Dashboard Gallery
+
+The following screenshots illustrate the two core interfaces of the application: the interactive profile configuration dashboard mapping specific enterprise risk segments, and the natural language co-pilot hub executing local tool-routed inference calculations.
+
+|  1. High Churn Risk Assessment (`69.00%`)  |           2. Moderate Churn Risk Diagnostics (`40.00%`)            |
+| :----------------------------------------: | :----------------------------------------------------------------: |
+|   ![High Churn Risk](./assets/High.png)    |           ![Moderate Churn Risk](./assets/moderate.png)            |
+| **3. Stable Customer Baseline (`42.00%`)** |              **4. Conversational GenAI Co-Pilot Hub**              |
+|  ![Stable Customer](./assets/stable.png)   | ![GenAI Co-Pilot](./assets/TelcoCustomerRetentionGenAICoPilot.png) |
+
+### 🔍 Deep-Dive: UI Engine Behavior & Visual Walkthrough
+
+#### 1. High Churn Risk Assessment (`High.png`)
+
+- **The Scenario:** This screen demonstrates how the ML pipeline responds to a volatile subscriber profile. A customer with a very short lifecycle (**Account Tenure: 2 Months**) and premium billing (**Monthly Charges: \$95**) is configured.
+- **System Indicators:** The customer uses high-infrastructure **Fiber Optic** internet, pays manually via **Electronic Check**, and holds a non-committal **Month-to-month** contract while being flagged with Senior Citizen Status.
+- **Pipeline Output:** The combination of manual billing, short tenure, high pricing, and lack of contractual commitment triggers a **CRITICAL/HIGH CHURN RISK** warning banner, calculating an exact individual churn probability of **69.00%**.
+- **Playbook Strategy:** The automated playbook surfaces three specific structural overrides: upgrading the user to a long-term commitment contract, running active line diagnostics on their fiber loop, and pushing incentives to switch to automated Auto-Pay.
+
+#### 2. Moderate Churn Risk Diagnostics (`moderate.png`)
+
+- **The Scenario:** This layout captures the threshold transition zone where a subscriber displays early indicators of account fragility. The account features a moderate timeline (**Account Tenure: 15 Months**) paired with standard pricing (**Monthly Charges: \$75**).
+- **System Indicators:** The customer is on a **Month-to-month** framework with **Fiber Optic** infrastructure but uses **Credit Card (Automatic)** billing and has a partner attached to the account to balance out the risk matrices.
+- **Pipeline Output:** The background model flags this configuration under the **MODERATE CHURN RISK** tier with an exact prediction probability of **40.00%**.
+- **Playbook Strategy:** The system bypasses aggressive recovery protocols and yields mid-tier stabilization plays, highlighting custom feature-guides to increase product interaction and prompting account managers to deliver soft contractual upgrade incentives.
+
+#### 3. Stable Customer Baseline (`stable.png`)
+
+- **The Scenario:** This view showcases the system handling a low-risk subscriber baseline. Despite having a short tenure (**2 Months**) and premium pricing (**\$95/month**), specific infrastructural variables anchor the client.
+- **System Indicators:** The critical differentiator here is the structural network choice. The subscriber uses a legacy **DSL** connection instead of the highly volatile Fiber Optic line.
+- **Pipeline Output:** The system logic detects the lower baseline risk associated with DSL account history, bypassing the elevated warnings completely to stamp a green **STABLE CUSTOMER** status badge with a calculated probability of **42.00%** (which sits well within the safe operational limits for this infrastructure tier).
+- **Playbook Strategy:** The dashboard restricts output to zero-cost, standard automated marketing and customer care workflows to maintain baseline operational efficiency.
+
+#### 4. Conversational GenAI Co-Pilot Hub (`TelcoCustomerRetentionGenAICoPilot.png`)
+
+- **The Scenario:** This display illustrates the decoupled, multi-pane conversational interface running via the Model Context Protocol (MCP). It shows the end-to-end integration loop combining the large language model with our local machine learning core.
+- **Left Pane Interface:** A user provides a raw, conversational English prompt: _"Predict the risk for a customer on a month-to-month fiber optic line who has been here for 2 months and pays \$95 a month"_.
+- **Background Orchestration:** The Groq agent parses the message, hits keywords like "predict" and "risk", and invokes the local MCP tool connection. The tool immediately transforms the raw string parameters into a structured matrix, executes the local Python Random Forest classifier, and routes the analytical payload back into the LLM chat window as a markdown-structured Executive Retention Report.
