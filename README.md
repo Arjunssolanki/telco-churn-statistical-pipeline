@@ -99,3 +99,34 @@ When the pipeline finishes running inside Docker, it outputs a cross-validated p
 - **Contract_Two year** (Long-Term Commitment Hold) — `6.49%` System Importance
 - **InternetService_Fiber optic** (High-Speed Fiber Infrastructure) — `4.81%` System Importance
 - **PaymentMethod_Electronic check** (Manual Monthly Billing Choice) — `3.95%` System Importance
+
+---
+
+## 🖼️ Production Risk Tier Reference Outputs
+
+The following user interface matrices demonstrate the behavioral outputs computed by the predictive framework across the three standardized enterprise customer retention risk segments:
+
+### 1. Stable Customer Profile (Low Retention Risk)
+
+- **Probability Threshold:** Under 30% (Calculated: **12.00%**)
+- **Trigger Properties:** High tenure, optimized automatic payment routing, or bundled contract terms.
+- **Visual Validation Artifact:**
+  ![Stable Profile Screen](assets/stable.png)
+
+---
+
+### 2. Elevated Risk Profile (Moderate Retention Risk)
+
+- **Probability Threshold:** 30% to 49.99% (Calculated: **40.00%**)
+- **Trigger Properties:** Month-to-month terms balanced out by intermediate service tenure logs.
+- **Visual Validation Artifact:**
+  ![Moderate Profile Screen](assets/moderate.png)
+
+---
+
+### 3. Critical Churn Profile (High Retention Risk)
+
+- **Probability Threshold:** 50% and above (Calculated Profile Sample: High Risk State)
+- **Trigger Properties:** Very low tenure combined with expensive unbundled fiber optic line rates.
+- **Visual Validation Artifact:**
+  ![High Profile Screen](assets/High.png)

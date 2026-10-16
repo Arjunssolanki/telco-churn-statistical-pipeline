@@ -48,3 +48,6 @@ model_parameters:
   random_state: 42
   rf_estimators: 100
   class_weight: "balanced" # Handle Telco class imbalance natively
+
+database:
+  name: "telco_churn_db"
